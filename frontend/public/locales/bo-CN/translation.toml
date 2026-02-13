@@ -16,7 +16,13 @@ comingSoon = "འབྱོར་ལ་ཉེ"
 confirmClose = "སྒོ་བརྒྱབ་པ་ངེས་གཏན་བཟོ་བ།"
 confirmCloseCancel = "འདོར་བ"
 confirmCloseConfirm = "སྒོ་རྒྱག་པ།"
+confirmCloseDiscard = "Discard changes and close"
 confirmCloseMessage = "ཁྱེད་རང་གིས་ཡིག་ཆ་འདི་ཁ་རྒྱག་འདོད་ཡོད་དམ།"
+confirmCloseSave = "Save and close"
+confirmCloseSaveFailed = "Saved with errors. {{count}} file{{plural}} could not be saved."
+confirmCloseSaveFailedTitle = "Save Failed"
+confirmCloseUnsaved = "This file has unsaved changes."
+confirmCloseUnsavedList = "You have {{count}} file{{plural}} with unsaved changes.\n\n{{fileList}}"
 confirmPasswordErrorMessage = "གསང་གྲངས་གསར་པ་དང་གཏན་འཁེལ་གྱི་གསང་གྲངས་དེ་མཐུན་དགོས།"
 custom = "རང་བཟོ..."
 customPosition = "ལུགས་མཐུན་གྱི་གནས་བབ།"
@@ -39,6 +45,8 @@ edit = "རྩོམ་སྒྲིག"
 editYourNewFiles = "ཁྱེད་རང་གི་ཡིག་ཆ་གསར་པ་རྩོམ་སྒྲིག་བྱེད་དགོས།"
 exportAndContinue = "ཕྱིར་གཏོང་དང་མུ་མཐུད་པ།"
 false = "ནོར་འཁྲུལ"
+fileNotSavedToDisk = "Not saved to disk"
+fileSavedToDisk = "File saved to disk"
 fileSelected = "བདམས་པ།: {{filename}}"
 filesSelected = "{{count}} ཡིག་ཆ་བདམས་པ།"
 font = "ཡིག་གཟུགས་པ།"
@@ -829,8 +837,17 @@ label = "མིང་།"
 [admin.settings.endpoints]
 description = "API མཐའ་མཚམས་དང་མཐའ་མཚམས་སྡེ་ཚན་གང་ཡོད་མེད་ཚོད་འཛིན་བྱེད།"
 management = "མཇུག་སྡུད་དོ་དམ།"
-note = "དྲན་ཐོ། དབང་པོ་སྐྱོན་ཅན་གྱིས་API འཛུལ་སྤྱོད་ཚད་བཀག་བྱེད་ཀྱི་ཡོད་ཀྱང་། UI ཆ་ཤས་མེད་པར་བཟོ་མི་ཐུབ། འགྱུར་བ་གཏོང་བར་དགོས་མཁོའི་བསྐྱར་འགོ་འཛུགས་དགོས།"
 title = "API མཇུག་སྒྲིལ།"
+userDefaults = "User Preference Defaults"
+userDefaultsDescription = "Set default values for user preferences. Users can override these in their personal settings."
+
+[admin.settings.endpoints.defaultHideUnavailableConversions]
+description = "Remove disabled conversion options instead of showing them greyed out"
+label = "Hide unavailable conversions by default"
+
+[admin.settings.endpoints.defaultHideUnavailableTools]
+description = "Remove disabled tools instead of showing them greyed out"
+label = "Hide unavailable tools by default"
 
 [admin.settings.endpoints.groupsToRemove]
 description = "མཇུག་འབྲས་སྡེ་ཚན་དེ་མེད་པར་བཟོ་བའི་སྡེ་ཚན་འདེམས།"
@@ -3407,6 +3424,10 @@ desc = "PDF ནས་འབྲེལ་འདྲིས་ཀྱི་ཆ་ཤ�
 tags = "སྟབས་བདེ་རུ་གཏོང་བ།"
 title = "ཕྲག་དོག"
 
+[home.formFill]
+desc = "Fill PDF form fields interactively with a visual editor"
+title = "Fill Form"
+
 [home.getPdfInfo]
 desc = "PDFs ཐོག་གནས་ཚུལ་གང་རུང་དང་ཚང་མ་ལེན་དགོས།"
 tags = "བརྡ་འཕྲིན། མེ་ཊ་ཌ་ཊ། ཞིབ་ཕྲ།"
@@ -4885,11 +4906,14 @@ title = "རྡོག་རྡོག་བར་གྱི་ཚིག་།"
 failed = "PDF བཅོས་སྒྲིག་བྱེད་སྐབས་ནོར་འཁྲུལ་བྱུང་ཡོད།"
 
 [redact.manual]
+activate = "Activate Redaction Tool"
+active = "Redaction Mode Active"
 apply = "འཇུག"
 applyChanges = "འགྱུར་བ་འཇུག་པ།"
 applyRedactions = "Apply Redactions"
 applyWarning = "⚠️ རྟག་བརྟན་འཇུག ཕྱིར་འབྱོར་མི་ཐུབ དང་འོག་གི་གཞི་གྲངས་བསུབ་བྱེད།"
 boxRedaction = "སྒམ་གྱི་རི་མོ་བཤུས་པ།"
+colorLabel = "Redaction Colour"
 colourPicker = "ཁ་དོག་འདེམས་མཁན།"
 controlsTitle = "ལག་སྒུལ་གསང་སྦེད་ཚོད་འཛིན"
 convertPDFToImageLabel = "PDF ལ་PDF-Image ལ་སྒྱུར་དགོས།"
@@ -5299,6 +5323,7 @@ draw = "འབྲི"
 exitRedaction = "གསང་སྦེད་ཐབས་ལས་ཕྱིར་ཐོན"
 exportAll = "ཕྱིར་གཏོང་PDF"
 exportSelected = "ཕྱིར་གཏོང་འདེམས་སྒྲུག་བྱས་པའི་ཤོག་ངོས།"
+formFill = "Fill Form"
 language = "སྐད་རིགས"
 panMode = "པན་ཐབས་ཀྱི་ཐབས་ལམ།"
 print = "པར་ཤུས་PDF"
@@ -5312,6 +5337,7 @@ search = "འཚོལ་ཞིབ་PDF"
 selectAll = "ཚང་མ་འདེམས།"
 selectByNumber = "ཤོག་ངོས་ཨང་རྟགས་ཀྱིས་འདེམས།"
 toggleAnnotations = "བསྒུལ་བསྒྱུར། མིང་ཚིག་མཐོང་ཐུབ་ཚད།"
+toggleAttachments = "Toggle Attachments"
 toggleBookmarks = "བསྒྱུར་དེབ་ཀྱི་རྟགས་མཚན།"
 toggleSidebar = "བསྒྱུར་བའི་ཕྱོགས་བསྒྱུར།"
 toggleTheme = "བསྒྱུར་བའི་བརྗོད་གཞི།"
@@ -6445,6 +6471,24 @@ singlePageView = "ཤོག་ངོས་གཅིག་པའི་མཐོ�
 unknownFile = "མ་ཤེས་པའི་ཡིག་ཆ།"
 zoomIn = "Zoom in"
 zoomOut = "ཆུང་དུ་བཟོ།"
+
+[viewer.attachments]
+empty = "No attachments in this document"
+loading = "Loading attachments..."
+noDocument = "Open a PDF to view its attachments."
+noMatch = "No attachments match your search"
+noSupport = "Attachment support is unavailable for this viewer."
+searchPlaceholder = "Search attachments"
+title = "Attachments"
+
+[viewer.formBar]
+apply = "Apply Changes"
+dismiss = "Dismiss"
+download = "Download PDF"
+hasFieldsDesc = "This PDF contains fillable fields"
+title = "Form Fields"
+unsavedBadge = "Unsaved"
+unsavedDesc = "You have unsaved changes"
 
 [viewPdf]
 header = "PDF ལ་གཟིགས།"

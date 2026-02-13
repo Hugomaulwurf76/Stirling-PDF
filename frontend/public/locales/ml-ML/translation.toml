@@ -16,7 +16,13 @@ comingSoon = "ഉടൻ വരുന്നു"
 confirmClose = "അടയ്ക്കൽ സ്ഥിരീകരിക്കുക"
 confirmCloseCancel = "റദ്ദാക്കുക"
 confirmCloseConfirm = "ഫയൽ അടയ്ക്കുക"
+confirmCloseDiscard = "Discard changes and close"
 confirmCloseMessage = "ഈ ഫയൽ അടയ്ക്കണമെന്ന് നിങ്ങൾക്ക് തീർച്ചയാണോ?"
+confirmCloseSave = "Save and close"
+confirmCloseSaveFailed = "Saved with errors. {{count}} file{{plural}} could not be saved."
+confirmCloseSaveFailedTitle = "Save Failed"
+confirmCloseUnsaved = "This file has unsaved changes."
+confirmCloseUnsavedList = "You have {{count}} file{{plural}} with unsaved changes.\n\n{{fileList}}"
 confirmPasswordErrorMessage = "പുതിയ പാസ്‌വേഡും പുതിയ പാസ്‌വേഡ് സ്ഥിരീകരണവും പൊരുത്തപ്പെടണം."
 custom = "ഇഷ്ടാനുസൃതം..."
 customPosition = "ഇഷ്ടാനുസൃത സ്ഥാനം"
@@ -39,6 +45,8 @@ edit = "തിരുത്തുക"
 editYourNewFiles = "നിങ്ങളുടെ പുതിയ ഫയൽ(കൾ) തിരുത്തുക"
 exportAndContinue = "എക്സ്പോർട്ട് ചെയ്ത് തുടരുക"
 false = "തെറ്റ്"
+fileNotSavedToDisk = "Not saved to disk"
+fileSavedToDisk = "File saved to disk"
 fileSelected = "തിരഞ്ഞെടുത്തത്: {{filename}}"
 filesSelected = "ഫയലുകൾ തിരഞ്ഞെടുത്തു"
 font = "അക്ഷരം"
@@ -829,8 +837,17 @@ label = "യൂസർനെയിം"
 [admin.settings.endpoints]
 description = "ഏതു API എൻഡ്‌പോയിന്റുകളും എൻഡ്‌പോയിന്റ് ഗ്രൂപ്പുകളും ലഭ്യമാകണമെന്നത് നിയന്ത്രിക്കുക."
 management = "എൻഡ്‌പോയിന്റ് മാനേജ്മെന്റ്"
-note = "കുറിപ്പ്: എൻഡ്‌പോയിന്റുകൾ അപ്രാപ്തമാക്കുന്നത് API ആക്‌സസ് നിയന്ത്രിക്കും, പക്ഷേ UI ഘടകങ്ങൾ നീക്കില്ല. മാറ്റങ്ങൾ പ്രാബല്യത്തിൽ വരാൻ റീസ്റ്റാർട്ട് ആവശ്യമുണ്ട്."
 title = "API എൻഡ്‌പോയിന്റുകൾ"
+userDefaults = "User Preference Defaults"
+userDefaultsDescription = "Set default values for user preferences. Users can override these in their personal settings."
+
+[admin.settings.endpoints.defaultHideUnavailableConversions]
+description = "Remove disabled conversion options instead of showing them greyed out"
+label = "Hide unavailable conversions by default"
+
+[admin.settings.endpoints.defaultHideUnavailableTools]
+description = "Remove disabled tools instead of showing them greyed out"
+label = "Hide unavailable tools by default"
 
 [admin.settings.endpoints.groupsToRemove]
 description = "അപ്രാപ്തമാക്കേണ്ട എൻഡ്‌പോയിന്റ് ഗ്രൂപ്പുകൾ തിരഞ്ഞെടുക്കുക"
@@ -3407,6 +3424,10 @@ desc = "ഒരു PDF-ൽ നിന്ന് എല്ലാ ഇന്ററാ�
 tags = "ലളിതമാക്കുക,നീക്കം ചെയ്യുക,ഇന്ററാക്ടീവ്"
 title = "പരത്തുക"
 
+[home.formFill]
+desc = "Fill PDF form fields interactively with a visual editor"
+title = "Fill Form"
+
 [home.getPdfInfo]
 desc = "PDF-കളെക്കുറിച്ചുള്ള സാധ്യമായ എല്ലാ വിവരങ്ങളും നേടുന്നു"
 tags = "വിവരം,മെറ്റാഡാറ്റ,വിശദാംശങ്ങൾ"
@@ -4885,11 +4906,14 @@ title = "റിഡാക്റ്റ് ചെയ്യേണ്ട വാക്
 failed = "PDF റിഡാക്റ്റ് ചെയ്യുന്നതിനിടെ പിശക് സംഭവിച്ചു."
 
 [redact.manual]
+activate = "Activate Redaction Tool"
+active = "Redaction Mode Active"
 apply = "പ്രയോഗിക്കുക"
 applyChanges = "മാറ്റങ്ങൾ പ്രയോഗിക്കുക"
 applyRedactions = "Apply Redactions"
 applyWarning = "⚠️ സ്ഥിരമായി പ്രയോഗിക്കുന്നു; പിന്‍വലിക്കാൻ കഴിയില്ല, അടിഞ്ഞിരിക്കുന്ന ഡാറ്റ ഇല്ലാതാകും"
 boxRedaction = "ബോക്സ് വരച്ച് റിഡാക്റ്റ് ചെയ്യുക"
+colorLabel = "Redaction Colour"
 colourPicker = "നിറം തിരഞ്ഞെടുക്കൽ"
 controlsTitle = "മാനുവൽ റെഡാക്ഷൻ നിയന്ത്രണങ്ങൾ"
 convertPDFToImageLabel = "PDF-നെ PDF-Image ആയി മാറ്റുക (ബോക്സിന് പിന്നിലെ ടെക്സ്റ്റ് നീക്കാൻ ഉപയോഗിക്കുന്നു)"
@@ -5299,6 +5323,7 @@ draw = "വരയ്ക്കുക"
 exitRedaction = "റെഡാക്ഷൻ മോഡിൽ നിന്ന് പുറത്ത് പോകുക"
 exportAll = "PDF എക്സ്പോർട്ട് ചെയ്യുക"
 exportSelected = "തിരഞ്ഞെടുത്ത പേജുകൾ എക്സ്പോർട്ട് ചെയ്യുക"
+formFill = "Fill Form"
 language = "ഭാഷ"
 panMode = "പാൻ മോഡ്"
 print = "PDF അച്ചടിക്കുക"
@@ -5312,6 +5337,7 @@ search = "PDF തിരയുക"
 selectAll = "എല്ലാം തിരഞ്ഞെടുക്കുക"
 selectByNumber = "പേജ് നമ്പറുകൾ ഉപയോഗിച്ച് തിരഞ്ഞെടുക്കുക"
 toggleAnnotations = "അനോട്ടേഷൻ ദൃശ്യമാനം മാറ്റുക"
+toggleAttachments = "Toggle Attachments"
 toggleBookmarks = "ബുക്ക്‌മാർക്കുകൾ ടോഗിൾ ചെയ്യുക"
 toggleSidebar = "സൈഡ്ബാർ മാറ്റുക"
 toggleTheme = "തീം മാറ്റുക"
@@ -6445,6 +6471,24 @@ singlePageView = "ഒറ്റ പേജ് ദൃശ്യം"
 unknownFile = "അപരിചിതമായ ഫയൽ"
 zoomIn = "സൂം ഇൻ"
 zoomOut = "സൂം ഔട്ട്"
+
+[viewer.attachments]
+empty = "No attachments in this document"
+loading = "Loading attachments..."
+noDocument = "Open a PDF to view its attachments."
+noMatch = "No attachments match your search"
+noSupport = "Attachment support is unavailable for this viewer."
+searchPlaceholder = "Search attachments"
+title = "Attachments"
+
+[viewer.formBar]
+apply = "Apply Changes"
+dismiss = "Dismiss"
+download = "Download PDF"
+hasFieldsDesc = "This PDF contains fillable fields"
+title = "Form Fields"
+unsavedBadge = "Unsaved"
+unsavedDesc = "You have unsaved changes"
 
 [viewPdf]
 header = "PDF കാണുക"
